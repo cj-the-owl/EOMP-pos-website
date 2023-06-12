@@ -31,6 +31,10 @@ body {
     align-items: center;
     background-color: #e89be8!important;
 }
+
+#block-1 {
+    background-color: #8A5FF5 !important;
+}
 form {
     display: flex;
     flex-direction: row;
@@ -48,4 +52,17 @@ input {
 
 #Message {
     height: 80px;
+}
+
+/* background thing */
+
+#back {
+    position: relative;
+}
+
+#back span {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 250px;
 }
