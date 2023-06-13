@@ -52,48 +52,17 @@ body {
     height: 200px;
 }
 
-/* Animation for products */
-
-/* .card {
-    position: relative;
-    width: 300px;
-    height: 350px;
-    margin: 20px;
-    background:#e89be8;
-    border-radius: 20px;
-    transition: 0.5s;
-    transition-delay: 0.5s;
+.add-btn {
+    border: 1px solid black;
+    background-color:#F5B6E1;
+    color: black;
 }
 
-.card:hover {
-    width: 600px;
-    transition-delay: 0s;
+.add-btn:hover {
+    background-color: #E658D4;
+    color: #A129C9;
+    border: 1px solid transparent;
 }
 
-.card .circle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:#A129C9;
-    border-radius: 20px;
-    overflow: hidden;
-}
 
-.card .circle::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:#8A5FF5;
-    clip-path: circle(120px at center);
-    transition: 0.5s;
-}
-
-.card:hover .circle::before {
-    clip-path: circle(400px at center);
-} */
 

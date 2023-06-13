@@ -126,9 +126,22 @@ function displayProducts() {
         <img src="${product.image}" alt="${product.name}" id="product-img">
         <h3>${product.name}</h3>
         <p>${product.price}</p>
-        <button onclick="addToCart(${product.id})" class="add-btn">Add To Cart</button>`;
+        <button onclick="addToCart(${product.id})" class=" btn add-btn">Add To Cart</button>`;
         ourProducts.appendChild(productElement);
     });
 };
 
+let cart = JSON.parse(localStorage.getItem("Products")) || [];
+
+function addToCart(productId) {
+    let product = products.find((product) => product.id === productId);
+    if (product && product.quantity > 0) {
+        cart.push(product);
+        product.quantity--;
+        updateCart();
+    }
+}
+
 displayProducts();
+
+updateCart();
