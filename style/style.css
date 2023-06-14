@@ -3,13 +3,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* #navBar {
-    background-image: url(https://i.postimg.cc/4yNP8gz6/sharingan-gif-9-unscreen.gif);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-} */
-
 #hero {
     height: 640px;
     background-image: url(https://i.postimg.cc/yYmfS4KB/streets-of-tokyo.jpg);
@@ -40,6 +33,10 @@ body {
     border-radius: 5px;
 }
 
+#shop-btn {
+    background-color: transparent;
+}
+
 #shop-btn:hover {
     background-color: #E658D4;
     color: #A129C9;
@@ -59,4 +56,16 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.btn {
+    color: black;
+    background-color:#F5B6E1;
+    border: 1px solid black;
+}
+
+.btn:hover {
+    background-color: #E658D4;
+    color: #A129C9;
+}
+
 
