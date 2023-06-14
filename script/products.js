@@ -95,27 +95,54 @@ let products = [
         quantity: 5,
         category: "T-Shirts"
     },
-    // {
-    //     id: 13,
-    //     image: "#",
-    //     price: "#",
-    //     quantity: 5,
-    //     category: "#"
-    // },
-    // {
-    //     id: 14,
-    //     image: "#",
-    //     price: "#",
-    //     quantity: 5,
-    //     category: "#"
-    // },
-    // {
-    //     id: 15,
-    //     image: "#",
-    //     price: "#",
-    //     quantity: 5,
-    //     category: "#"
-    // },
+    {
+        id: 13,
+        name: "Naruto Uchiha",
+        image: "https://i.postimg.cc/wjyj2Qnd/Uchiha-removebg-preview.png",
+        price: "500",
+        quantity: 5,
+        category: "Jackets"
+    },
+    {
+        id: 14,
+        name: "Tokyo Revengers",
+        image: "https://i.postimg.cc/8C7CJhgj/I-m-Reincarnated-as-Emma-twin-Tokyo-revengers-fan-fiction-Reincarnated-clothing-removebg-previe.png",
+        price: "500",
+        quantity: 5,
+        category: "Jackets"
+    },
+    {
+        id: 15,
+        name: "Attack on Titan",
+        image: "https://i.postimg.cc/CLC7XqtB/Manteau-L-Attaque-des-Titans-Bataillon-d-exploration-Noir-M-removebg-preview.png",
+        price: "500",
+        quantity: 5,
+        category: "Jackets"
+    },
+    {
+        id: 16,
+        name: "Tokyo Ghoul",
+        image: "https://i.postimg.cc/Z57MsNBP/44-99-US-US-size-Men-Women-Hoodies-Anime-Tokyo-Ghoul-Ken-Kaneki-Cosplay-Jacket-Sweatshirts-Thicken.png",
+        price: "400",
+        quantity: 5,
+        category: "Jackets"
+    },
+    {
+        id: 17,
+        name: "Full Metal Alchemist",
+        image: "https://i.postimg.cc/FHMBQ4p1/44-25-US-25-OFF-New-Winter-Warm-Fullmetal-Alchemist-Hoodie-Anime-Hooded-Coat-Thick-Zipper-Men-Card.png",
+        price: "400",
+        quantity: 5,
+        category: "Jackets"
+    },
+    {
+        id: 18,
+        name: "Pokemon",
+        image: "https://i.postimg.cc/L8QZq9w6/Pokemon-go-valor-jacket-3-XL-Black-and-Grey-removebg-preview.png",
+        price: "400",
+        quantity: 5,
+        category: "Jackets"
+    },
 ];
 
 function displayProducts() {

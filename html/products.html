@@ -34,19 +34,17 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Products</a>
-                  </li>
-                </ul>
-                <li class="nav-item dropdown list-unstyled mx-5">
+                  <li class="nav-item dropdown list-unstyled">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Menu
                     </a>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="#">Admin</a></li>
                       <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#cartModal" href="#">Cart/Checkout</a></li>
+                      <li><a class="dropdown-item active" aria-current="page" href="#">Products</a></li>
                     </ul>
                   </li>
+                </ul>
               </div>
             </div>
           </nav>
@@ -57,17 +55,18 @@
         <div class="modal" id="cartModal">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <p>Total: <span id="total"></span></p>
                     <div class="modal-header">
-                        <h4 class="modal-title">Added Products</h4>
+                        <h4 class="modal-title">Your Cart</h4>
                         <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
                     </div>
-                    <div id="c">
+                    <div id="cart-body">
                         <div id="results">
                             <h5>Total</h5>
                         </div>
                     </div>
-                    <div class="modal-footer"></div>
+                    <div class="modal-footer">
+                      <p>Total: <span id="total"></span></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,7 +75,7 @@
             <h1 class="display-4 text-center fw-bold p-5">Check out our products!</h1>
         </div>
         <div class="p-5" id="products">
-            
+            <!-- display from js -->
         </div>
         <div id="cart-container">
             <div id="cart-body"></div>
