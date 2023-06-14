@@ -152,7 +152,7 @@ function displayProducts() {
         productElement.innerHTML = `
         <img src="${data.image}" alt="${data.name}" id="product-img">
         <h3>${data.name}</h3>
-        <p>${data.price}</p>
+        <p>R${data.price}</p>
         <button onclick="addToCart(${data.id})" class=" btn add-btn">Add To Cart</button>`;
         ourProducts.appendChild(productElement);
     });
