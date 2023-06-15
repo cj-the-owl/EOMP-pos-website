@@ -29,7 +29,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
@@ -39,7 +39,7 @@
                       Menu
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Admin</a></li>
+                      <li><a class="dropdown-item" href="./admin.html">Admin</a></li>
                       <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#cartModal" href="#">Cart/Checkout</a></li>
                       <li><a class="dropdown-item active" aria-current="page" href="#">Products</a></li>
                     </ul>
@@ -65,6 +65,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
+                      <a class="btn me-auto" onclick="clearCheckoutCart()">Checkout Products</a>
                       <p>Total: <span id="total"></span></p>
                     </div>
                 </div>

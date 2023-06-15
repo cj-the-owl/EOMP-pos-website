@@ -146,6 +146,11 @@ let products = [
 ];
 
 function displayProducts() {
+    if (localStorage.getItem("products") === null) {
+        localStorage.setItem("products", JSON.stringify(products));
+    }else {
+        products = JSON.parse(localStorage.getItem("products"));
+    }
     const ourProducts = document.getElementById("products");
     products.forEach((data) => {
         let productElement = document.createElement("div");
@@ -177,7 +182,8 @@ function deleteFromCart(index) {
 
 function updateCart() {
     let cartContainer = document.getElementById("cart-body");
-    localStorage.setItem("products", JSON.stringify(cart));
+    // localStorage.setItem("products", JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
     cartContainer.innerHTML = "";
     cart.forEach((product, index) => {
         let cartProduct = document.createElement("div");
@@ -200,7 +206,15 @@ function calculateTotal() {
     })
 
     totalElement.textContent = `${total}`;
-}    
+}
+
+function clearCheckoutCart() {
+    let modalFooter = document.querySelector(".modal-footer");
+    modalFooter.innerHTML = `
+    <h4>Thank You! Your Order Has Been Processed!</h4>`;
+    cart = [];
+    updateCart();
+}
 
 displayProducts();
 
