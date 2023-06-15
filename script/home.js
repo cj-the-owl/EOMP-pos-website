@@ -26,6 +26,6 @@ features.forEach((data) => {
     <img src="${data.image}" width="200" height="200" class="rounded-1">
     <h2 class="fw-norma">${data.title}</h2>
     <p>${data.des}</p>
-    <p><a class="btn" href="#">View</a></p>
+    <p><a class="btn" href="../html/products.html">View</a></p>
     </div>`
 });

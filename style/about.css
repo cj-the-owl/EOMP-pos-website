@@ -79,3 +79,28 @@ input {
     width: 250px;
     height: 250px;
 }
+
+@media screen and (max-width:400px) {
+    #img-block-1>img {
+        padding: 10px;
+        width: 100%;
+        height: 200px
+    }
+
+    #img-block-2 {
+        padding: 0 !important;
+        margin-right: 20px !important;
+        width: 100%;
+        
+    }
+
+    #img-block-2>img {
+        width: 300px !important;
+    }
+
+    #col-1 {
+        padding-left: 0 !important;
+    }
+    #est-block
+    
+}

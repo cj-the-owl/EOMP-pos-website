@@ -146,12 +146,12 @@ let products = [
 ];
 
 function displayProductItems() {
-    if (localStorage.getItem("products") === null) {
+    if (localStorage.getItem("productsId") === null) {
         localStorage.setItem("products", JSON.stringify(products));
     }else {
         products = JSON.parse(localStorage.getItem("products"));
     }
-
+    
     let myProd = document.querySelector(".productInfo");
     products.forEach((data) => {
         let prodElement = document.createElement("tr");
@@ -175,14 +175,17 @@ function displayProductItems() {
 displayProductItems()
 
 function addProduct() {
+    
     let Value = {
         id: +document.getElementById("Id").value,
         name: document.getElementById("Name").value,
-        image: document.getElementById("Preview").value,
+        image: document.getElementById("Preview"),
         price: document.getElementById("Price").value,
         quantity: document.getElementById("Quantity").value,
         category: document.getElementById("Category").value,
     };
+    console.log(Value);
+    
 
     products.push(Value);
     localStorage.setItem("products", JSON.stringify(products));
