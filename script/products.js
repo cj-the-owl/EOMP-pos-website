@@ -145,24 +145,34 @@ let products = [
     },
 ];
 
-function displayProducts() {
-
+function displayProducts(category = "") {
     if (localStorage.getItem("products") === null) {
         localStorage.setItem("products", JSON.stringify(products));
     }else {
         products = JSON.parse(localStorage.getItem("products"));
     }
     const ourProducts = document.getElementById("products");
+    ourProducts.innerHTML = "";
     products.forEach((data) => {
-        let productElement = document.createElement("div");
-        productElement.innerHTML = `
-        <img src="${data.image}" alt="${data.name}" id="product-img">
-        <h3>${data.name}</h3>
-        <p>R${data.price}</p>
-        <button onclick="addToCart(${data.id})" class=" btn add-btn">Add To Cart</button>`;
-        ourProducts.appendChild(productElement);
+        if (category === "" || data.category === category) {
+            let productElement = document.createElement("div");
+            productElement.innerHTML = `
+              <img src="${data.image}" alt="${data.name}" id="product-img">
+              <h3>${data.name}</h3>
+              <p>R${data.price}</p>
+              <button onclick="addToCart(${data.id})" class=" btn add-btn">Add To Cart</button>`;
+            ourProducts.appendChild(productElement);
+        }
+
     });
-};
+  }
+
+  function disCat() {
+    let catSel = document.getElementById("prodcat")
+    let catSeld = catSel.value;
+    displayProducts(catSeld);
+
+  }
 
 let cart = JSON.parse(localStorage.getItem("productsId")) || [];
 // let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -192,9 +202,9 @@ function updateCart() {
         cartProduct.innerHTML = `
         <span>${product.name}</span>
         <span>${product.price}</span>
-        <input type="number" placeholder="1" min="1" width="50px" height="40px">
+        <input type="number" placeholder="1" min="1" width="50px" height="40px" id="quantity-input">
         <p>Total ${product.price}</p>
-        <button onclick="deleteFromCart(${index})" class="delbtn">Delete</button>`;
+        <a class="btn" onclick="deleteFromCart(${index})">Delete</a>`;
         cartContainer.appendChild(cartProduct);
     });
     calculateTotal();
@@ -217,5 +227,34 @@ function clearCheckoutCart() {
     cart = [];
     updateCart();
 }
+
+
+
+// function disAll() {
+//     displayProducts();
+//   }
+  
+//   function dishoodies() {
+//     let storedProducts = localStorage.getItem("products");
+//     let products = JSON.parse(storedProducts) || [];
+//     let hoodies = products.filter((item) => item.category.toLowerCase() === "hoodies");
+//     displayProducts(hoodies);
+//   }
+  
+//   function disTshirts() {
+//     let storedProducts = localStorage.getItem("products");
+//     let products = JSON.parse(storedProducts) || [];
+//     let tShirts = products.filter((item) => item.category.toLowerCase() === "t-shirts");
+//     displayProducts(tShirts);
+//   }
+  
+//   function disJackets() {
+//     let storedProducts = localStorage.getItem("products");
+//     let products = JSON.parse(storedProducts) || [];
+//     let jackets = products.filter((item) => item.category.toLowerCase() === "jackets");
+//     displayProducts(jackets);
+//   }
+
+// disAll();
 
 displayProducts();

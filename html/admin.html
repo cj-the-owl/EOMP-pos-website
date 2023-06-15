@@ -43,7 +43,7 @@
                     </a>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="./admin.html">Admin</a></li>
-                      <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#cartModal" href="#">Cart/Checkout</a></li>
+                      <!-- <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#cartModal" href="#">Cart/Checkout</a></li> -->
                       <li><a class="dropdown-item" href="./products.html">Products</a></li>
                     </ul>
                   </li>
@@ -56,30 +56,34 @@
     <main>
       <h1 class="display-5 text-center p-3 fw-bold">Welcome to your admin page</h1>
       </div>
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Name</th>
-                <th scope="col">Preview</th>
-                <th scope="col">Price</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Category</th>
-                <th scope="col">Edit/Delete Product</th>
-              </tr>
-            </thead>
+      <div class="table-responsive-md">
+        <table class="table ">
+          <thead>
             <tr>
-              <td><input type="text" id="Id"></td>
-                <td><input type="text" id="Name"></td>
-                <td><input type="text" id="Image"></td>
-                <td><input type="text" id="Price"></td>
-                <td><input type="text" id="Quantity"></td>
-                <td><input type="text" id="Category"></td>
-                <td><button class="btn" onclick="addProduct()">Add Product</button></td>
+              <th scope="col">Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Preview</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Category</th>
+              <th scope="col">Edit/Delete Product</th>
             </tr>
-            <tbody class="productInfo">
-              
-            </tbody>
+          </thead>
+          <tr>
+            <td><input type="text" id="Id"></td>
+              <td><input type="text" id="Name"></td>
+              <td><input type="text" id="Image"></td>
+              <td><input type="text" id="Price"></td>
+              <td><input type="text" id="Quantity"></td>
+              <td><input type="text" id="Category"></td>
+              <td><button class="btn" onclick="addProduct()">Add Product</button></td>
+          </tr>
+          <tbody class="productInfo">
+            
+          </tbody>
+          </table>
+      </div>
+        
     </main>
 
     

@@ -82,10 +82,13 @@ input {
 }
 
 @media screen and (max-width:400px) {
-    #img-block-1>img {
-        padding: 10px;
+    #img-block-1 {
+        padding: 0 !important;
+        margin-right: 20px !important;
         width: 100%;
-        height: 200px
+    }
+    #img-block-1>img {
+        width: 300px !important;
     }
 
     #img-block-2 {
@@ -98,10 +101,35 @@ input {
     #img-block-2>img {
         width: 300px !important;
     }
-
-    #col-1 {
+    #col-0 {
+        margin-bottom: 50px;
+    }
+    #col-1, #col-0 {
         padding-left: 0 !important;
     }
-    /* #est-block */
-    
+    #est-block, #block-1, #block-3 {
+        padding: 0 !important;
+    }
+
+    #form {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 16rem !important;
+    }
+
+    .footer {
+        width: 100%;
+        padding: 0%;
+    }
+
+    .color-2 {
+        padding: 0 !important;
+        height: 130px !important;
+    }
+
+    .px-2>img {
+        padding: 0 !important;
+        width: 70px;
+        
+    }
 }

@@ -207,7 +207,10 @@ function addProduct() {
 }
 
 function deleteProduct(index) {
-    let deletedadminProduct = products.splice(index, 1)[0];
-    deletedadminProduct.products;
-    // displayProductItems();
+    products = JSON.parse(localStorage.getItem("products"));
+
+    products.splice(index, 1)[0];
+
+    localStorage.setItem("products", JSON.stringify(productss));
+    displayProductItems(); 
 }

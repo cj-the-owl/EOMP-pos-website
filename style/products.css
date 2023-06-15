@@ -87,4 +87,58 @@ body {
     border: 1px solid transparent;
 }
 
+#quantity-input {
+    background-color: transparent;
+}
 
+#prodcat {
+    background-color: transparent;
+}
+
+option {
+    background-color: #F5B6E1 !important;
+}
+
+#prodcat.dropdown-item:hover {
+    background-color: #E658D4 !important;
+    color: #A129C9 !important;
+}
+
+#prodcat:hover {
+    background-color: #E658D4;
+    color: #A129C9;
+}
+/* media queries */
+@media screen and (max-width: 900px) {
+    #products {
+        display: grid;
+        grid-template-columns: auto auto auto ;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #products {
+        display: grid;
+        grid-template-columns: auto auto ;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #products {
+        display: grid;
+        grid-template-columns: auto ;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 150px;
+    }
+
+    #navBar {
+        width: 100%;
+    }
+}

@@ -77,7 +77,15 @@
         </div>
         
         <div>
-            <h1 class="display-4 text-center fw-bold p-5">Check out our products!</h1>
+            <h1 class="display-4 text-center fw-bold p-5">Check out our products!
+              <select id="prodcat" class="rounded-3">
+                <option value="All">All Products</option>
+                <option value="Jackets">Jackets</option>
+                <option value="Hoodies">Hoodies</option>
+                <option value="T-Shirts">T-Shirts</option>
+              </select>
+              <button class="btn" onclick="disCat()">Select</button>
+            </h1>
         </div>
         <div class="p-5" id="products">
             <!-- display from js -->
