@@ -178,11 +178,12 @@ function addProduct() {
     let Value = {
         id: +document.getElementById("Id").value,
         name: document.getElementById("Name").value,
-        image: document.getElementById("Preview").value,
+        image: document.getElementById("Preview"),
         price: document.getElementById("Price").value,
         quantity: document.getElementById("Quantity").value,
         category: document.getElementById("Category").value,
     };
+    console.log(Value);
 
     products.push(Value);
     localStorage.setItem("products", JSON.stringify(products));
@@ -203,8 +204,8 @@ function addProduct() {
     })
 }
 
-function deleteProduct(index) {
-    let deletedadminProduct = products.splice(index, 1)[0];
-    deletedadminProduct.products;
+// function deleteProduct(index) {
+//     let deletedadminProduct = products.splice(index, 1)[0];
+//     deletedadminProduct.products;
     // displayProductItems();
-}
+// }
