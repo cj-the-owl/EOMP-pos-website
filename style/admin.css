@@ -38,3 +38,17 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.btn {
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.btn:hover {
+    background-color: #E658D4;
+    color: #A129C9;
+}
+
+input {
+    background: transparent;
+}
