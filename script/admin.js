@@ -1,4 +1,4 @@
-let anotherProduct = [
+let products = [
     {
         id: 1,
         name: "Spy x Family",
@@ -146,46 +146,65 @@ let anotherProduct = [
 ];
 
 function displayProductItems() {
+    if (localStorage.getItem("products") === null) {
+        localStorage.setItem("products", JSON.stringify(products));
+    }else {
+        products = JSON.parse(localStorage.getItem("products"));
+    }
+
     let myProd = document.querySelector(".productInfo");
-    anotherProduct.forEach((data) => {
+    products.forEach((data) => {
         let prodElement = document.createElement("tr");
         prodElement.innerHTML = `
         <td>${data.id}</td>
-        <td>${data.name}</td>  
+        <td>${data.name}</td>
+        <td><img src="${data.image}" width="100px" height="100px"></td>
         <td>${data.price}</td>
+        <td>${data.quantity}</td>
         <td>${data.category}</td>
+        <td><a class="btn" onclick="deleteProduct(index)">Delete</a> <a class="btn" onclick="editProducts">Edit</a></td>
         `;
         myProd.appendChild(prodElement);
     })
 }
 
-function saveProducts() {
-    localStorage.setItem('data', productInfo.innerHTML);
-}
+// function saveProducts() {
+//     localStorage.setItem('data', productInfo.innerHTML);
+// }
 
 displayProductItems()
 
-// function addProduct() {
-//     let Value = {
-//         id: document.getElementById("Id").value,
-//         name: document.getElementById("Name").value,
-//         price: document.getElementById("Price").value,
-//         category: document.getElementById("Category"),
-//     };
+function addProduct() {
+    let Value = {
+        id: +document.getElementById("Id").value,
+        name: document.getElementById("Name").value,
+        image: document.getElementById("Preview").value,
+        price: document.getElementById("Price").value,
+        quantity: document.getElementById("Quantity").value,
+        category: document.getElementById("Category").value,
+    };
 
-//     anotherProduct.push(Value);
+    products.push(Value);
+    localStorage.setItem("products", JSON.stringify(products));
+    let table = document.querySelector(".productInfo");
+    // table.innerHTML = "";
+    products.forEach((data) => {
+        table.innerHTML += `
+        <tbody>
+        <tr>
+        <td>${data.id}</td>
+        <td>${data.name}</td>
+        <td><img src="${data.image}" width="100px" height="100px"</td>
+        <td>${data.price}</td>
+        <td>${data.quantity}</td>
+        <td>${data.category}</td>
+        </tr>
+        </tbody>`;
+    })
+}
 
-//     let table = document.querySelector("productInfo");
-//     table.innerHTML = "";
-//     anotherProduct.forEach((data) => {
-//         table.innerHTML += `
-//         <tbody>
-//         <tr>
-//         <td>${data.id}</td>
-//         <td>${data.name}</td>
-//         <td>${data.price}</td>
-//         <td>${data.category}</td>
-//         </tr>
-//         </tbody>`;
-//     })
-// }
+function deleteProduct(index) {
+    let deletedadminProduct = products.splice(index, 1)[0];
+    deletedadminProduct.products;
+    // displayProductItems();
+}

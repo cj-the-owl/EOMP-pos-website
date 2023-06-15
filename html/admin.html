@@ -50,23 +50,31 @@
     </header>
     
     <main>
-      
+      <h1 class="display-5 text-center p-3 fw-bold">Welcome to your admin page</h1>
       </div>
         <table class="table">
             <thead>
               <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Name</th>
+                <th scope="col">Preview</th>
                 <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
                 <th scope="col">Category</th>
+                <th scope="col">Edit/Delete Product</th>
               </tr>
             </thead>
+            <tr>
+              <td><input type="text" id="Id"></td>
+                <td><input type="text" id="Name"></td>
+                <td><input type="text" id="Image"></td>
+                <td><input type="text" id="Price"></td>
+                <td><input type="text" id="Quantity"></td>
+                <td><input type="text" id="Category"></td>
+                <td><button class="btn" onclick="addProduct()">Add Product</button></td>
+            </tr>
             <tbody class="productInfo">
-              <input type="text" id="Id">
-              <input type="text" id="Name">
-              <input type="text" id="Price">
-              <input type="text" id="Category">
-              <button class="btn" onlick="addProduct()">Add Product</button>
+              
             </tbody>
     </main>
 
