@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style/admin.css">
+    <title>Admin</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-black" id="navBar">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item dropdown list-unstyled">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Menu
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Admin</a></li>
+                      <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#cartModal" href="#">Cart/Checkout</a></li>
+                      <li><a class="dropdown-item" href="#">Products</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    
+    <main>
+      <h1 class="display-5 text-center p-3 fw-bold">Welcome to your admin page</h1>
+      </div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Preview</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Category</th>
+                <th scope="col">Edit/Delete Product</th>
+              </tr>
+            </thead>
+            <tr>
+              <td><input type="text" id="Id"></td>
+                <td><input type="text" id="Name"></td>
+                <td><input type="text" id="Image"></td>
+                <td><input type="text" id="Price"></td>
+                <td><input type="text" id="Quantity"></td>
+                <td><input type="text" id="Category"></td>
+                <td><button class="btn" onclick="addProduct()">Add Product</button></td>
+            </tr>
+            <tbody class="productInfo">
+              
+            </tbody>
+    </main>
+
+    <!-- <footer class="footer">
+        <div class="pt-2">&copy Copyright 2023 cj-the-owl</div>
+        <div class="color2">
+            <a class="px-2" href="https://www.instagram.com/cj.the.owl/"><img src="https://i.postimg.cc/6QL5t9nq/icons8-instagram-100.png"></a>
+            <a class="px-2" href="https://github.com/cj-the-owl"><img src="https://i.postimg.cc/2yH1mzph/icons8-github-100.png"></a>
+            <a class="px-2" href="https://www.linkedin.com/in/caryn-jayn-lodewyk-411165276/"><img src="https://i.postimg.cc/3x1cTVW7/icons8-linkedin-100.png"></a>
+        </div>
+        
+    </footer> -->
+
+    <script src="../script/admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
