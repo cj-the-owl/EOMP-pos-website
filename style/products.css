@@ -74,5 +74,16 @@ body {
     background-color: #F5B6E1 !important;
 }
 
+.btn {
+    background: transparent;
+    border: 1px solid black;
+    margin-left: 30px !important;
+}
+
+.btn:hover {
+    background-color: #E658D4;
+    color: #A129C9;
+    border: 1px solid transparent;
+}
 
 
